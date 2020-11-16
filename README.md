@@ -10,13 +10,13 @@
   The relevant page is calculated based on cosine similarity and page rank of each document.
 ## Required packages
 
-- PyQt5 for 
-- nltk for
-- BeautifulSoup for
-- Requests
-- Pandas for
-- sklearn for 
-- pickle for
+- **PyQt5** used to create GUI(Graphical user interface)
+- **nltk** used to perform NLP(Natural Language Processing) pre processing techinque
+- **BeautifulSoup** used to web scraping 
+- **Requests** used to connect with GUI application
+- **Pandas** used to read CSV file and mathematical operation
+- **sklearn** used to perform various algorithms 
+- **pickle** used to store obtained result
 
 The above mentioned packages can be installed using `pip install package_name`
 
