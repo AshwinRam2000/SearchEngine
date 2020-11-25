@@ -1,57 +1,55 @@
 # Search Engine
-### A Search Engine On UIC Domain
-
-Final project for CS 582 Information Retrieval course at University of Illinois at Chicago
--
-![Results](snapshots/searchresults.png)
--
-
-## Running the program
-
-To run the program from terminal just use the command:
-
-	python SearchEngine.py 
 
 
-## Dependencies Required
-- Pandas
-- Pickle
-- BeautifulSoup
-- Requests
-- nltk
-- sklearn
-- PyQt5
+## search engine design based on pagerank algorithm:  
 
-All the above dependencies can be installed through `pip install`
+    To design a simple search engine on uic domain (uic.edu) as part of a big data analysis project.
+  implementation of web crawling in uic domain then extract the documentation.indexes these documents and documents are preprocessed techniques like parsed,remove symbols, remove stop words and vectorized. 
+  page rank is applied to uic domain graphs which are generated based on the documents. 
+  to develop gui using python which takes input keywords and returns the most relevant pages to the query in the uic website. 
+  the relevant page is calculated based on cosine similarity and page rank of each document.
+## required packages
 
-# Overview
+- **pyqt5** used to create gui(graphical user interface)
+- **nltk** used to perform nlp(natural language processing) pre processing techinque
+- **beautifulsoup** used to web scraping 
+- **requests** used to connect with gui application
+- **pandas** used to read csv file and mathematical operation
+- **sklearn** used to perform various algorithms 
+- **pickle** used to store obtained result
+
+the above mentioned packages can be installed using `pip install package_name`
+
+## to running the programm
+
+simply run searchengine.py file using command :
+      `python searchengine.py`
 
 
-A search engine implementation on the UIC domain (uic.edu) as part of the final project for the course CS 582 – Information Retrieval- at University of Illinois, Chicago
-The search engine crawls the UIC domain, indexes the documents and these documents are parsed, preprocessed and vectorized. A UIC domain graph is generated based on these documents, on which page rank is applied.
-The search engine has a simple UI which takes in the user query and returns the most relevant pages to the query in the UIC domain. The relevancy is calculated based on the cosine similarity and the page rank of the individual documents.
+![output](gui.png)
 
 # Description
 
-The search engine has the following components:
+the search engine has the following components:
 
-### Web Spider 
+### web spider 
 
- Crawls the UIC domain, indexes and generates graph of the crawled pages.
+ crawls the uic domain, indexes and generates graph of the crawled pages.
  
-### Processor 
+### processor 
 
-Which loads individual documents, preprocess and vectorizes the documents.
+which loads individual documents, preprocess and vectorizes the documents.
 
-### Ranker 
+### ranker 
 
- Runs page rank on the UIC graph, ranks the documents based on the cosine similarity and the page ranks. 
+ runs page rank on the uic graph, ranks the documents based on the cosine similarity and the page ranks. 
  
-### Access Interface 
+### access interface 
 
 
-Presents a graphical user interface of the search engine to the user, which accepts queries and retrieves the most relevant pages to the query.
+presents a graphical user interface of the search engine to the user, which accepts queries and retrieves the most relevant pages to the query.
 
 
-During a normal run of the engine only Ranker and Access Interface are active. The processed pages and documents are stored in the binary format, which are accessed by the ranker and the Access Interface invokes the ranker with the query user provides.
+during a normal run of the engine only ranker and access interface are active. the processed pages and documents are stored in the binary format, which are accessed by the ranker and the access interface invokes the ranker with the query user provides.
 
+=======
